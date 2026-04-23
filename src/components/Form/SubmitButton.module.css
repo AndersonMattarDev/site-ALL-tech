@@ -1,0 +1,36 @@
+.btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 0.7em 1.2em;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+    color: #fff;
+}
+
+@media screen and (max-width: 1000px){
+    /* max-width = telas menores que 1000px*/
+    .btn {
+        background-color: #272525;
+        color: #fff;
+        padding: 0.7em 1.2em;
+        text-decoration: none;
+        transition: .5s;
+        cursor: pointer;
+        align-items: center;
+    
+        border-radius: 5px;
+    }
+    
+    .btn:hover {
+        color: #ffbb44;
+    }
+}

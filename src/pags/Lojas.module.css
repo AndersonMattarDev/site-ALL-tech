@@ -1,0 +1,80 @@
+.conteudo {
+  width: min(100%, 1140px);
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 112px);
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+  border-radius: 32px;
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.12);
+}
+
+.titulo {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: clamp(1.8rem, 2.5vw, 2.6rem);
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  margin: 0;
+}
+
+.cards img {
+    box-shadow:  19px 19px 38px #5a5a5a,
+    -19px -19px 38px #ffffff;
+}
+
+.titulo p {
+  margin: 0 auto;
+  color: rgba(15, 23, 42, 0.86);
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  text-align: center;
+  border-right: 2px solid rgba(15, 23, 42, 0.2);
+  padding-right: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.typingAnimation {
+    animation: blinkCursor 500ms steps(40) infinite normal, 
+    typing 4s steps(40) 1s normal both;
+}
+
+/* Animação do texto */
+@keyframes typing{
+    from {
+        width: 0;
+    }
+    to {
+        width: 46rem;
+    }
+}
+
+/* Animação do cursor */
+@keyframes blinkCursor {
+    from {
+        border-right-color: rgba(62, 61, 61, 0.75);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  justify-items: center;
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .conteudo {
+    padding: 4rem 2rem 6rem;
+  }
+}

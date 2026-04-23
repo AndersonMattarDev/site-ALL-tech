@@ -1,0 +1,52 @@
+.Footer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(15, 23, 42, 0.94);
+  color: #f8fafc;
+  padding: 1rem 2rem;
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 -14px 40px rgba(15, 23, 42, 0.18);
+}
+
+.Footer ul {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Footer li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: color 0.25s ease;
+}
+
+.Footer li:hover {
+  color: #fbbf24;
+}
+
+.Footer p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.Footer p span {
+  color: #fbbf24;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 850px) {
+  .Footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 1.2rem;
+  }
+}

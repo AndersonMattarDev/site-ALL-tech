@@ -1,0 +1,129 @@
+.conteudo {
+  width: min(100%, 1140px);
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: flex-start;
+  min-height: calc(100vh - 112px);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+  border-radius: 32px;
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.12);
+}
+
+.conteudo a {
+  color: inherit;
+  text-decoration: none;
+  font-family: 'Inter', system-ui, sans-serif;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+.conteudo a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.15);
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+}
+
+.conteudo a span {
+  font-size: 1.5rem;
+  color: #3b82f6;
+  flex-shrink: 0;
+}
+
+.links h1 {
+  font-size: clamp(2.4rem, 4vw, 4.4rem);
+  color: #0f172a;
+  margin: 0 0 1rem 0;
+  text-align: center;
+  font-weight: 700;
+}
+
+.conteudo img {
+  border-radius: 1.25rem;
+  width: 100%;
+  max-width: 28rem;
+  height: auto;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.conteudo img:hover {
+  transform: scale(1.05);
+}
+
+.contactsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.links h1 {
+  font-size: clamp(2.4rem, 4vw, 4.4rem);
+  color: #0f172a;
+  margin: 0 0 1rem 0;
+  text-align: center;
+  font-weight: 700;
+}
+
+.imageContainer {
+  flex: 1;
+  min-width: 280px;
+  max-width: 520px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.85;
+}
+
+@media screen and (max-width: 1000px) {
+  .conteudo {
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  .contactsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .links h1 {
+    font-size: clamp(2.2rem, 5vw, 3rem);
+  }
+
+  .conteudo a {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .conteudo a span {
+    font-size: 1.3rem;
+  }
+
+  .imageContainer {
+    order: 2;
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    opacity: 0.95;
+  }
+
+  .conteudo img {
+    width: min(100%, 24rem);
+    height: auto;
+    border-radius: 1.5rem;
+  }
+}
+

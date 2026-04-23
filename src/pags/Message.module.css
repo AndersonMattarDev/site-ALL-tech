@@ -1,0 +1,29 @@
+.contact_container {
+  width: min(100%, 480px);
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+  min-height: calc(100vh - 112px);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+  border-radius: 32px;
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.12);
+}
+
+.titulo {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  text-align: center;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: #111827;
+}
+
+.txt {
+  text-align: center;
+  font: 500 clamp(1rem, 2vw, 1.2rem) 'Inter', system-ui, sans-serif;
+  color: #6b7280;
+  line-height: 1.6;
+}
