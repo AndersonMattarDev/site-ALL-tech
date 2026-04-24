@@ -13,19 +13,13 @@
   box-shadow: 0 30px 80px rgba(15, 23, 42, 0.12);
 }
 
+/* ================= TITULO ================= */
+
 .titulo {
   font-family: 'Inter', system-ui, sans-serif;
-  font-size: clamp(1.8rem, 2.5vw, 2.6rem);
   display: flex;
-  flex-wrap: wrap;
-  width: 100%;
   justify-content: center;
-  margin: 0;
-}
-
-.cards img {
-    box-shadow:  19px 19px 38px #5a5a5a,
-    -19px -19px 38px #ffffff;
+  width: 100%;
 }
 
 .titulo p {
@@ -33,36 +27,42 @@
   color: rgba(15, 23, 42, 0.86);
   font-size: clamp(1.5rem, 2vw, 2rem);
   text-align: center;
-  border-right: 2px solid rgba(15, 23, 42, 0.2);
-  padding-right: 1rem;
+
+  border-right: 2px solid rgba(15, 23, 42, 0.3);
+  padding-right: 0.5rem;
+
   white-space: nowrap;
   overflow: hidden;
+  width: 0;
 }
+
+/* ================= ANIMAÇÃO ================= */
 
 .typingAnimation {
-    animation: blinkCursor 500ms steps(40) infinite normal, 
-    typing 4s steps(40) 1s normal both;
+  animation: 
+    typing 4s steps(55) 1s forwards,
+    blinkCursor 600ms infinite;
 }
 
-/* Animação do texto */
-@keyframes typing{
-    from {
-        width: 0;
-    }
-    to {
-        width: 46rem;
-    }
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 55ch; /* baseado no tamanho da frase */
+  }
 }
 
-/* Animação do cursor */
 @keyframes blinkCursor {
-    from {
-        border-right-color: rgba(62, 61, 61, 0.75);
-    }
-    to {
-        border-right-color: transparent;
-    }
+  0%, 100% {
+    border-right-color: rgba(15, 23, 42, 0.6);
+  }
+  50% {
+    border-right-color: transparent;
+  }
 }
+
+/* ================= CARDS ================= */
 
 .cards {
   display: grid;
@@ -73,8 +73,38 @@
   margin-top: 3rem;
 }
 
+.cards img {
+  box-shadow: 19px 19px 38px #5a5a5a,
+              -19px -19px 38px #ffffff;
+}
+
+/* ================= RESPONSIVO ================= */
+
 @media screen and (min-width: 768px) {
   .conteudo {
     padding: 4rem 2rem 6rem;
+  }
+}
+
+/* MOBILE AJUSTADO */
+@media (max-width: 600px) {
+
+  .conteudo {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .titulo p {
+    white-space: normal;
+    border-right: none;
+    width: 100%;
+  }
+
+  .typingAnimation {
+    animation: none;
+  }
+
+  .cards {
+    margin-top: 2rem;
+    gap: 1rem;
   }
 }

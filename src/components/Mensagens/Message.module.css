@@ -60,14 +60,24 @@
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
-.message{
+.message {
     font: bold 16pt Arial;
-    background-color: #d1fae5;
-    color: #065f46;
     text-align: center;
     border-radius: 8px;
     padding: 1em;
     margin-bottom: 1em;
+}
+
+/* sucesso */
+.success {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+/* erro */
+.error {
+    background-color: #fee2e2;
+    color: #991b1b;
 }
 
 @media screen and (max-width: 1000px){
@@ -90,5 +100,19 @@
 
     .btn {
         font-size: 12pt;
+    }
+     .message {
+        font-size: 14px;
+        padding: 0.8em;
+        margin-bottom: 0.8em;
+        border-left: 5px solid;
+    }
+
+    .success {
+        border-color: #10b981;
+    }
+
+    .error {
+        border-color: #ef4444;
     }
 }
