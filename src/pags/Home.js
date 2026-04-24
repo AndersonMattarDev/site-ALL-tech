@@ -50,7 +50,7 @@ function Home() {
 
                 <li className={styles.image_item}>
                     <img src={imagem_8} alt="imagem" />
-                    <span>Acessoria completa em Ti e Redes!</span>
+                    <span>Assessoria completa em Ti e Redes!</span>
                 </li>
 
                 <li className={styles.image_item}>
