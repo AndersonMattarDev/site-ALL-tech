@@ -15,8 +15,17 @@ import imagem8 from './Tapetes/tapete_estrela peq.jpeg';
 function Artesanato () {
     return(
         <section className={styles.container}>
-            <h1> <span>< FaRegHandPointRight/></span> Faça seu pedido </h1>
-            <p><span> <FaWhatsapp /></span> 032 98463-8048</p>
+            <h1> <span>< FaRegHandPointRight/></span> Pedidos Sob Encomenda</h1>
+            <p>
+  <span><FaWhatsapp /></span>
+  <a
+    href="https://wa.me/5532984240038?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20os%20tapetes%20de%20acroche."
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    032 98424-0038
+  </a>
+</p>
            <ArtesanatoCard image={imagem1} title="Tapete Crochê Auto Relevo" price="R$ 120,00" />
            <ArtesanatoCard image={imagem2} title="Centro Flor Rosa" price="R$ 30,00" />
            <ArtesanatoCard image={imagem3} title="Centro de Mesa Beje" price="R$ 30,00" />

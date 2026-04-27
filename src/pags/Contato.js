@@ -51,7 +51,10 @@ function Contato() {
               Instagram
             </a>
 
-            <LinkButton to="/message" text="Enviar Mensagem" />
+            <div className={styles.linkButtonCustom}>
+              <LinkButton to="/message" text="Enviar Mensagem" />
+            </div>
+            
           </div>
 
           <div className={styles.imageContainer}>
